@@ -1,4 +1,3 @@
-
 #Mostrando o Menu Principal
 print('Bem-Vindo ao menu!')
 print('1. Estudantes')
@@ -26,7 +25,10 @@ print('5. Voltar ao menu')
 opcao_secundaria = input('Digite uma opção valida:')
 print('Você escolheu a opção secundária {}'.format(opcao_secundaria))
 
+if opcao_secundaria == '1' or opcao_secundaria =='2' or opcao_secundaria =='3'or opcao_secundaria =='4'or opcao_secundaria =='5':
+        print ('Você escolheu a opção válida {}'.format(opcao_secundaria))
+else:
+    print('Você digitou uma opção secundária INVÁLIDA')
 
-#dentro do OR - Se um desses casos forem verdadeiros daí será verdade
-#E o or substitui o if ou elif reduzindo e facilitando o código
 
+#Para usar uma quebra de linha é a barra invertida e enter ( para facilitar a leitura do código)
