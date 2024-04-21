@@ -36,8 +36,9 @@ while True:
     if opcao_secundaria == '1':
        print ('Você escolheu a opção INCLUIR nº {}'.format(opcao_secundaria))
        nome = input('Digite seu nome completo:')
+       estudantes.append(nome)
     elif opcao_secundaria =='2':   
-       print ('Você escolheu a opção LISTAR nº {}'.format(opcao_secundaria)) 
+       print ('Listagem: {}'.format(nome [1])) 
        
        if len(estudantes)== 0:
         print ('Não há estudantes cadastrados')
