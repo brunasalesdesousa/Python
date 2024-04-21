@@ -1,5 +1,6 @@
- 
-estudantes =[]
+
+estudantes = []
+
 
 while True:
  #Mostrando o Menu Principal
@@ -36,15 +37,16 @@ while True:
     if opcao_secundaria == '1':
        print ('Você escolheu a opção INCLUIR nº {}'.format(opcao_secundaria))
        nome = input('Digite seu nome completo:')
-       estudantes.append(nome)
+       estudante = [nome]
+       estudantes.append(estudante)
     elif opcao_secundaria =='2':   
-       print ('Listagem: {}'.format(nome [1])) 
+       print (estudantes) 
        
-       if len(estudantes)== 0:
+       if len(estudantes) == 0:
         print ('Não há estudantes cadastrados')
        else:
-        for estudante in estudantes:  
-         print (estudante) 
+        for i in estudantes:  
+         print (i) 
     elif opcao_secundaria =='3'or opcao_secundaria =='4':
        print('Opção escolhida EM DESENVOLVIMENTO')
     elif opcao_secundaria =='5': 
