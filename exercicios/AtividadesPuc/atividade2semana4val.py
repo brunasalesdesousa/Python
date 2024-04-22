@@ -58,17 +58,17 @@ while True:
        codigo_para_atualizar = int(input('Digite o código do estudante que deseja atualizar: '))
        estudante_atualizado = None
        for dicionario_estudante in lista_estudantes:
-           if dicionario_estudante['cod_estudante'] == estudante_atualizado:
+           if dicionario_estudante['cod_estudante'] == codigo_para_atualizar:
                estudante_atualizado = dicionario_estudante
                break
        if estudante_atualizado is None:
-           print('Estudante {} não encontrado'.format(codigo_para_atualizar))
+          print('Estudante {} não encontrado'.format(codigo_para_atualizar))
        else:
-           estudante_atualizado['cod_estudante'] = int(input('Digite o novo código do estudante: '))
-           estudante_atualizado['nome_estudante'] = input('Digite o novo nome do estudante: ')
-           estudante_atualizado['cpf'] = input('Digite o novo cpf do estudante: ')
-
+          estudante_atualizado['cod_estudante'] = int(input('Digite o novo código do estudante: '))
+          estudante_atualizado['nome_estudante'] = input('Digite o novo nome do estudante: ')
+          estudante_atualizado['cpf'] = input('Digite o novo cpf do estudante: ')  
            
+       
 
     elif opcao_secundaria =='4':
         print('Você escolheu excluir estudante da lista')   
@@ -78,7 +78,12 @@ while True:
             if dicionario_estudante['cod_estudante'] == codigo_para_excluir:
                 estudante_removido = dicionario_estudante
                 break
-        lista_estudantes.remove(estudante_removido)   
+        if estudante_removido is None:
+           print(' estudando código {} não encontrado'.format(codigo_para_excluir))
+        else:   
+           lista_estudantes.remove(estudante_removido)   
+      
+
     elif opcao_secundaria =='5': 
        print('Você escolheu voltar ao Menu Principal')
        break
